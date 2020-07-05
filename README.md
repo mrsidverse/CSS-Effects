@@ -6,3 +6,7 @@
 
 ## [Menu-1](https://github.com/mrsid-31/CSS-Effects/tree/master/animated-hamburger)
 ![](https://github.com/mrsid-31/CSS-Effects/blob/master/Previews/menu-1.gif)
+
+## [Gradient Border](https://github.com/mrsid-31/CSS-Effects/tree/master/Gradiant%20Border)
+![](https://github.com/mrsid-31/CSS-Effects/blob/master/Previews/gradient-border.png)
+

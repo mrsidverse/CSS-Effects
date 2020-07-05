@@ -1,0 +1,39 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Gradient Border</title>
+    <style>
+        body {
+            overflow: hidden;
+            background-color: #000;
+        }
+
+        .gradient-border {
+            width: 180px;
+            margin: 300px 300px;
+            padding: 10px 0px;
+            font-size: 20px;
+            color: #3aff54;
+            font-weight: 500;
+            text-align: center;
+            border: 3px solid;
+            border-image-source: linear-gradient(to right, #009245, #FCEE21);
+            border-image-slice: 1;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="main">
+        <div class="gradient-border">
+            Hey there!
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <style>
+        h1 {
+            margin: auto;
+            margin-top: 40px;
+            text-align: center;
+            color: coral;
+        }
+
+        #piechart {
+            margin: auto;
+
+            width: 550px;
+            height: 400px;
+            padding: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main">
+        <h1>Google Charts</h1>
+        <div id="piechart"></div>
+    </div>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+    <script type="text/javascript">
+        // Load google charts
+        google.charts.load('current', { 'packages': ['corechart'] });
+        google.charts.setOnLoadCallback(drawChart);
+
+        // Draw the chart and set the chart values
+        function drawChart() {
+            var data = google.visualization.arrayToDataTable([
+                ['Task', 'Daily Routine'],
+                ['Coding', 4],
+                ['Social Media', 2],
+                ['Reading', 3],
+                ['Gym', 2],
+                ['Other', 5],
+                ['Sleep', 8]
+            ]);
+
+            // Optional; add a title and set the width and height of the chart
+            var options = { 'title': 'Daily Routine', 'width': 500, 'height': 400 };
+
+            // Display the chart inside the <div> element with id="piechart"
+            var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+            chart.draw(data, options);
+        }
+    </script>
+
+</body>
+
+</html>

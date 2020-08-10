@@ -1,0 +1,85 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+  margin: 0px;
+  padding: 0px;
+  background: #d4d4d4;
+  font-family: 'Lato', sans-serif;
+}
+
+nav{
+  float: none; 
+  clear: both;
+  width: 30%; 
+  margin: 30% auto;
+  background: #eee;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+nav li{
+	float: none; 
+  width: 100%;
+}
+
+nav li a{
+  display: block; 
+  width: 100%; 
+  padding: 20px;
+  color: #444;
+  position: relative; 
+  z-index: 2;
+  text-decoration: none;
+  box-sizing: border-box;  
+  -moz-box-sizing: border-box;  
+  -webkit-box-sizing: border-box; 
+}
+	
+nav li a:hover{color: #fff;}
+nav li:first-child a{ border-left: 10px solid #f0776c;  }
+nav li:nth-child(2) a{ border-left: 10px solid #3498db;  }
+nav li:nth-child(3) a{ border-left: 10px solid #ffd071;  }
+nav li:last-child a{ border-left: 10px solid #1abc9c; }
+
+nav li a:after { 
+  content: "";
+  height: 100%; 
+  left: 0; 
+  top: 0; 
+  width: 0px;  
+  position: absolute; 
+  transition: all 0.3s ease 0s; 
+  -webkit-transition: all 0.3s ease 0s; 
+  z-index: -1;
+}
+
+nav li a:hover:after{ width: 100%; }
+nav li:first-child a:after{ background: #f0776c;  }
+nav li:nth-child(2) a:after{ background: #3498db;  }
+nav li:nth-child(3) a:after{ background:  #ffd071;  }
+nav li:last-child a:after{ background: #1abc9c; }
+
+
+
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul>
+          <li><a href="">Home</a></li>
+          <li><a href="">Projects</a></li>
+          <li><a href="">Pricing Chart</a></li>
+          <li><a href="">Contact Us</a></li>
+        </ul>
+      </nav>
+</body>
+</html>

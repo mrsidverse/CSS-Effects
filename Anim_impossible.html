@@ -1,0 +1,60 @@
+<html>
+  <head>
+    <!-- <link href="main.css" type="text/css" rel="stylesheet"> -->
+    <style>
+      .asd {
+        background-color: black;
+      }
+      .svg-wrap {
+        width: 300px;
+        height: 70px;
+        margin: auto;
+        margin-top: 200px;
+      }
+
+      .box {
+        stroke-dasharray: 45 800;
+        stroke-dashoffset: -670;
+        stroke: #ff0000;
+        stroke-width: 7px;
+        transition: all ease-in-out 1.5s;
+      }
+
+      .text {
+        position: relative;
+        color: white;
+        top: -80px;
+        left: 58px;
+        letter-spacing: 5px;
+      }
+
+      .text-hover {
+        transition: all ease-in-out1.5s;
+      }
+
+      .svg-wrap:hover .box {
+        stroke-dashoffset: 0;
+        stroke-dasharray: 1000;
+        stroke-width: 7px;
+        stroke: #00faac;
+      }
+
+      .svg-wrap:hover .text-hover {
+        margin-left: 15px;
+      }
+    </style>
+  </head>
+  <body class="asd">
+    <div>
+      <div class="svg-wrap">
+        <svg width="350" height="70">
+          <rect class="box" width="350" height="70" />
+          <h1 class="text">
+            im
+            <span class="text-hover">possible.</span>
+          </h1>
+        </svg>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,78 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liquid Fill Animation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montez&display=swap" rel="stylesheet">
+    <style>
+        
+       :root{
+           --background: #f8f8f8;
+           --dark: #303032;
+       }
+       *{
+           box-sizing: border-box;
+           margin: 0;
+           padding: 0;
+
+       }
+       body{
+           min-height: 100vh;
+           display: flex;
+           align-items: center;
+           justify-content: center;
+           background: var(--background);
+
+       }
+       .box{
+           position: relative;
+           background: var(--dark);
+           border:  0.15rem solid var(--dark);
+           width: 8rem;
+           height: 8rem;
+
+           /* if you want to use circular container
+              then use border-radius: 50%; */
+
+           outline: 0;
+           overflow: hidden;    
+       }
+       .box::before{
+           content: "M";
+           font-family: Montez, cursive;
+           font-size: 3.5rem;
+           height: 100%;
+           width: 100%;
+           display: flex;
+           align-items: center;
+           justify-content: center;
+           color: var(--background);
+       }
+       .box::after{
+           content: "";
+           position: absolute;
+           bottom: -50%;
+           left: -50%;
+           height: 200%;
+           width: 200%;
+           background: var(--background);
+           border-radius: 45%;
+           animation: spin 5s ease-in-out infinite;
+       }
+       @keyframes spin{
+           0%{
+               transform: translateY(0) rotate(0deg);
+           }
+           100%{
+               transform: translateY(-100%) rotate(500deg);
+           }
+       }
+
+    </style>
+</head>
+<body>
+    <div class="box">
+
+    </div>
+</body>
+</html>

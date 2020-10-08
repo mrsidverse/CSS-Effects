@@ -1,0 +1,54 @@
+<html lang="en">
+
+<head>
+  <title>Document</title>
+</head>
+<style>
+  body {
+    background-color: white;
+  }
+
+  div {
+    margin: 120px;
+  }
+
+  p {
+    padding-top: 20px;
+    height: 60px;
+    width: 80px;
+    font-size: 35px;
+    text-align: center;
+    background-color: #70db70;
+    border: 2px #1f7a1f solid;
+    outline: none;
+    border-radius: 50px;
+  }
+</style>
+
+<body>
+  <div id="div1"></div>
+</body>
+<script>
+  var getInitials = function (string) {
+    var names = string.split(" "),
+      initials = names[0].substring(0, 1).toUpperCase();
+
+    if (names.length > 1) {
+      initials += names[names.length - 1].substring(0, 1).toUpperCase();
+    }
+    return initials;
+  };
+
+  // console.log(getInitials("Mark Zucker"));
+  // console.log(getInitials("FirstName MiddleName LastName"));
+  // console.log(getInitials("1stName 2ndName 3rdName 4thName 5thName"));
+
+  var para = document.createElement("p");
+  var alpha = document.createTextNode(getInitials("Sid there"));
+  para.appendChild(alpha);
+
+  var element = document.getElementById("div1");
+  element.appendChild(para);
+</script>
+
+</html>
